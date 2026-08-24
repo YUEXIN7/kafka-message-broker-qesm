@@ -1,3 +1,7 @@
+## You can see the results without cloning the project:
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YUEXIN7/kafka-message-broker-qesm/blob/main/draw_plots.ipynb)
+
 # QESM Kafka Broker Batching Simulation
 
 This Maven project uses the ORIS Sirio library to simulate a Stochastic Time
@@ -188,3 +192,41 @@ outcomes/
 
 Running `TransientSimulation` directly creates a filename containing the reward
 type and supplied model parameters.
+
+## Draw the outcome plots
+
+The root-level `draw_plots.ipynb` notebook reads the six configured CSV files
+from `outcomes` and plots:
+
+- baseline queue behaviour;
+- the BatchSize effect on gateway and service backlog;
+- the Timeout effect on gateway and service backlog; and
+- cumulative batching-induced idle behaviour.
+
+The plots are displayed inline in the notebook only.
+
+## Open the plots in Google Colab
+
+The file
+[`draw_plots.ipynb`](https://github.com/YUEXIN7/kafka-message-broker-qesm/blob/main/draw_plots.ipynb)
+reads the six configured CSV files from the `outcomes/` folder and creates the
+baseline, BatchSize, Timeout, and cumulative batching-induced idle plots.
+
+### Open directly
+
+Click the **Open in Colab** badge near the top of this README, or use this link:
+
+[Open `draw_plots.ipynb` in Google Colab](https://colab.research.google.com/github.com/YUEXIN7/kafka-message-broker-qesm/blob/main/draw_plots.ipynb)
+
+### Open manually from Colab
+
+1. Open [Google Colab](https://colab.research.google.com/).
+2. Select **File → Open notebook**.
+3. Select the **GitHub** tab.
+4. Paste this complete GitHub URL into the search field:
+
+   ```text
+    https://github.com/YUEXIN7/kafka-message-broker-qesm/blob/main/draw_plots.ipynb
+   ```
+
+5. Press Enter and select `draw_plots.ipynb` from the result.
