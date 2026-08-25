@@ -40,6 +40,22 @@ public final class App {
 		// Batching-induced idle study: use the cumulative watcher rewards.
 		runExperiment("batching_induced_idle", BASELINE_BATCH_SIZE, BASELINE_TIMEOUT, STABILITY,
 				RewardType.CUMULATIVE_WATCHER);
+
+		// ------------------------------------------------------------
+		// 5. Proportional BatchSize / Timeout study
+		// ------------------------------------------------------------
+		// Professor's suggested complementary experiment:
+		//
+		// BatchSize=10, Timeout=10
+		// BatchSize=30, Timeout=30
+		//
+		// In all cases:
+		//
+		// BatchSize / Timeout = 1
+		//
+
+		runExperiment("proportional_batch_10_timeout_10", 10, "10", STABILITY, RewardType.NORMAL_TRANSIENT);
+		runExperiment("proportional_batch_30_timeout_30", 30, "30", STABILITY, RewardType.NORMAL_TRANSIENT);
 	}
 
 	private static void runExperiment(String experimentName, int batchSize, String timeout, int stability,
